@@ -6,8 +6,6 @@ class TypewiseTest(unittest.TestCase):
     test_sample = []
     test_sample = Data_Sender.Sensor_data_generator(10,0,50)
     self.assertTrue(len(test_sample)==10)
-    for i in test_sample :
-      self.assertTrue(i >= 0 and i < 50)
   
   def Test_fetch_data_from_sensors(self):
     test_data = Data_Sender.fetch_data_from_sensors(10)
