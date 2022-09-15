@@ -21,7 +21,7 @@ TEST_CASE("To check if extractTemperatureData() extracts precisely the number of
 TEST_CASE("To check if createChargeValues() generates precisely the number of values set by macro MAX_INPUTS. In this case, 5 values") 
 {
     std::string testString = "Sample_no:1, Temperature:45, SOC:80\nSample_no:2, Temperature:55, SOC:50\nSample_no:3, Temperature:50, SOC:40\nSample_no:4, Temperature:40, SOC:80\nSample_no:5, Temperature:65, SOC:70\nSample_no:6, Temperature:70, SOC:80";
-    vector<int> chargeData = createChargeValues(TEST_INPUTS);
+    vector<int> chargeData = extractSOCData(TEST_INPUTS);
     int chargeDataSize = chargeData.size();
     REQUIRE(chargeDataSize == TEST_INPUTS);
 }
